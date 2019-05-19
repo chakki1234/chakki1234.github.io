@@ -1,0 +1,47 @@
+body{
+	background-image: linear-gradient(to right,#43b752,#3eb7b7)
+}
+
+.maincontent{
+	height: 550px;
+	width:  25%;
+	background-color: #d2d5db;
+
+}
+
+#padding{
+	margin-top: 6%;
+}
+
+.borderset{
+	border :5px solid #232323;
+}
+
+#sizingimage{
+	height:200px;
+	width:200px;
+}
+
+#fontstyle{
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;	
+}
+
+#hrline{
+	height: 3px;
+	color: red;
+}
+
+#fontforcontent{
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 1rem;
+}
+
+#github{
+	font-size:2rem;
+}
+
+#clickbutton{
+	font-family: 'Anton', sans-serif;
+	font-size: 1.5rem;
+}
