@@ -4,7 +4,7 @@ var knowmore=document.querySelector("#clickbutton");
 knowmore.addEventListener("click", function(){
 	if(this.textContent==="Know more")
 {
-changethetext.innerHTML=" <h5>&nbsp&nbsp&nbsp&nbsp<strong>Some Cool facts about CAPTAIN AMERICA</strong></h5> <ol><li>HIS FIRST FILM APPEARANCE WAS A 1944 SERIAL</li><li>HIS SHIELD WASN'T ALWAYS A VIBRANIUM FRISBEE</li><li> CHRIS EVANS TURNED DOWN THE MOVIE ROLE THREE TIMES BEFORE ACCEPTING</li>";
+changethetext.innerHTML=" <h5>&nbsp&nbsp&nbsp&nbsp&nbsp<strong>Some Cool facts about CAPTAIN AMERICA</strong></h5> <ol><li>HIS FIRST FILM APPEARANCE WAS A 1944 SERIAL</li><li>HIS SHIELD WASN'T ALWAYS A VIBRANIUM FRISBEE</li><li> CHRIS EVANS TURNED DOWN THE MOVIE ROLE THREE TIMES BEFORE ACCEPTING</li>";
 this.textContent="Go Back";
 }
 else
