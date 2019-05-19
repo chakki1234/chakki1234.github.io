@@ -18,8 +18,8 @@ body{
 }
 
 #sizingimage{
-	height:200px;
-	width:200px;
+	height:40%;
+	width: 55%;
 }
 
 #fontstyle{
@@ -35,6 +35,7 @@ body{
 #fontforcontent{
 	font-family: 'Fjalla One', sans-serif;
 	font-size: 1rem;
+    max-height: 120px;
 }
 
 #github{
