@@ -1,5 +1,7 @@
+
 body{
-	background-image: linear-gradient(to right,#43b752,#3eb7b7)
+	background-image: linear-gradient(to right,#43b752,#3eb7b7);
+	padding-bottom:0px;
 }
 
 .maincontent{
@@ -44,4 +46,43 @@ a{
 #clickbutton{
 	font-family: 'Anton', sans-serif;
 	font-size: 1.5rem;
+}
+
+@media (max-width: 1366px)
+{
+	#fontstyle{
+		      font-size: 2rem;
+	          }
+    #fontforcontent{
+    	font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 960px)
+{
+	#fontstyle{
+		      font-size: 1.5rem;
+	          }
+	#clickbutton{
+		      font-size: 1rem;
+	}
+
+    #fontforcontent{
+    	font-size:0.7rem;
+    }
+}
+
+@media (max-width: 736px)
+{
+	#fontstyle{
+		      font-size: 1rem;
+	          }
+    #clickbutton{
+		      font-size: 0.6rem;
+	}
+
+    #fontforcontent{
+    	font-size:0.5rem;
+    }
 }
