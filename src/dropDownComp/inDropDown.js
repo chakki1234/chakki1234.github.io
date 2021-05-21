@@ -19,7 +19,7 @@ class InDropDownComp extends React.Component {
         <button class="btn btn-light dropdown-toggle p-0" id='dropdownMenuButton' style={btn_background} type="button" data-bs-toggle="dropdown" aria-expanded="false">
           {this.props.name}
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        
             {(()=>{
               let list_options = []
               if(typeof this.props.values != 'undefined'){
@@ -27,11 +27,13 @@ class InDropDownComp extends React.Component {
                   console.log(e)
                   list_options.push( <li><a class="dropdown-item" href="#">{e}</a></li>)
                 });
+              
+              return (<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      {list_options}
+                      </ul>
+                      ) 
               }
-              return list_options 
             })()}
-        </ul>
-
         </div>
       );
     }
