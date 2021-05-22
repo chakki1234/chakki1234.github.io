@@ -7,7 +7,7 @@ class DropDownComp extends React.Component {
 
       const border_style = {
         borderStyle :'solid',
-        borderWidth : '2px 0px 2px 0px'
+        borderWidth : '1px 0px 1px 0px'
       }
 
       const drop_down_obj = {
@@ -19,7 +19,7 @@ class DropDownComp extends React.Component {
       
       
       return (
-        <div className="d-flex flex-row col-2 justify-content-between" style={border_style}>
+        <div className="d-flex flex-row col-2 justify-content-between pt-2 pb-2" style={border_style}>
         { (()=>{
           let drop_list = []
           Object.values(this.props).forEach(e => {

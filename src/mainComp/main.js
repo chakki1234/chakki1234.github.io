@@ -1,6 +1,7 @@
 import React from 'react';
 import DropDownComp from '../dropDownComp/drop_down';
 import ImgComp from '../photoComp/photoComp';
+import TextComp from '../textComp/textComp'
 
 class MainComp extends React.Component {
      
@@ -27,8 +28,8 @@ class MainComp extends React.Component {
           <DropDownComp name1='Projects' name2='Contact me'/>
        </div>
       
-      <ImgComp />
-      
+      <ImgComp/>
+      <TextComp />
       </div>
       );
     }

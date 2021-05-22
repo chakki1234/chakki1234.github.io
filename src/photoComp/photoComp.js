@@ -17,7 +17,7 @@ class ImgComp extends React.Component {
 
       const para_style = {
         fontFamily: "Barlow",
-        fontSize: '2rem',
+        fontSize: '1.5rem',
         color: '#383434'
       }
 
