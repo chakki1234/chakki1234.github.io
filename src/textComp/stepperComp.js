@@ -1,28 +1,14 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles((theme) => ({
-  button: {
-    marginTop: theme.spacing(1),
-    marginRight: theme.spacing(1),
-  },
-  actionsContainer: {
-    marginBottom: theme.spacing(2),
-  },
-  resetContainer: {
-    padding: theme.spacing(3),
-  },
-}));
 
 function getSteps() {
-  return ['National Institute of Technology Trichy', 'Maharishi Vidya Mandir', 'Chinmaya Vidyalaya'];
+  return ['National Institute of Technology Trichy', 'Maharishi Vidya Mandir', 'Chinmaya Vidyalaya', 'Coursera Courses'];
 }
 
 function getStepContent(step) {
@@ -33,63 +19,83 @@ function getStepContent(step) {
       return 'Completed my 11th and 12th here. Was a Computer Science student and finished off with 93.4%';
     case 2:
       return `My second home. Studied here from LKG to 10th. More than acads this school moulded me into the person I am. Lots of memories and bonds were created. Completed my class 10 with 10 CGPA`;
-    default:
+    case 3:
+        return `Completed the course ‘​ Neural Networks and Deep Learning’ and ​ ‘Improving Deep Neural
+        Networks and Hyperparameter tuning, Regularization and Optimization​’ ​from Deeplearning.ai
+        through Coursera. Implemented Deep Neural Network, Regularization, Xavier Initialization, mini-batch gradient
+        descent with momentum, RMS prop, and Adam Optimizer in Python using numerical libraries and
+        designed an image classifier with Batch norm in TensorFlow as a part of the course`
+      default: 
       return 'Unknown step';
   }
 }
 
-export default function VerticalLinearStepper() {
-  const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const steps = getSteps();
-  const backgnd_style = {
-     backgroundColor: '#ecebe7'
-  }
+class VerticalLinearStepper extends React.Component {
+   
+    constructor(props) {
+        super(props);
+        this.handleNext = this.handleNext.bind(this);
+        this.handleBack = this.handleBack.bind(this);
+        this.changeStateProps = this.changeStateProps.bind(this);
+    }
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
+    handleNext(){
+        this.changeStateProps(this.props.eduState + 1) 
+       };
+    
+     
+    handleBack(){
+        this.changeStateProps(this.props.eduState - 1)
+    };
+    
+    changeStateProps(value){
+        this.props.ChangeStateFn(value);
+    };
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
+  render(){
 
-
-  return (
-    <div className='d-flex col-10' >
-      <Stepper activeStep={activeStep} style={backgnd_style} orientation="vertical">
-        {steps.map((label, index) => (
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-            <StepContent>
-              <Typography>{getStepContent(index)}</Typography>
-              <div className={classes.actionsContainer}>
-                <div>
-                  <Button
-                    disabled={activeStep === 0}
-                    onClick={handleBack}
-                    className={classes.button}
-                  >
-                    Back
-                  </Button>
-                  {(()=>{
-                      if(activeStep != steps.length - 1){
-                          return (<Button
-                            variant="contained"
-                            color="primary"
-                            onClick={handleNext}
-                            className={classes.button}
-                          >
-                            Next
-                          </Button>)
-                      }
-                  })()}
+    const steps = getSteps();
+    const backgnd_style = {
+       backgroundColor: '#ecebe7'
+    }
+  
+    
+    return (
+      <div className='d-flex col-10' >
+        <Stepper activeStep={this.props.eduState} style={backgnd_style} orientation="vertical">
+          {steps.map((label, index) => (
+            <Step key={label}>
+              <StepLabel>{label}</StepLabel>
+              <StepContent>
+                <Typography>{getStepContent(index)}</Typography>
+                <div className='m-3'>
+                  <div>
+                    <Button
+                      disabled={this.props.eduState === 0}
+                      onClick={this.handleBack}
+                    >
+                      Back
+                    </Button>
+                    {(()=>{
+                        if(this.props.eduState !== steps.length - 1){
+                            return (<Button
+                              variant="contained"
+                              color="primary"
+                              onClick={this.handleNext}
+                            >
+                              Next
+                            </Button>)
+                        }
+                    })()}
+                  </div>
                 </div>
-              </div>
-            </StepContent>
-          </Step>
-        ))}
-      </Stepper>
-    </div>
-  );
+              </StepContent>
+            </Step>
+          ))}
+        </Stepper>
+      </div>
+    );
+    }
 }
+
+export default VerticalLinearStepper

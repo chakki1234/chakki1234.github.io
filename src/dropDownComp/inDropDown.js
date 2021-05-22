@@ -2,6 +2,17 @@ import React from 'react';
 
 class InDropDownComp extends React.Component {
      
+  constructor(props) {
+    super(props);
+    this.changeStateChild = this.changeStateChild.bind(this)
+  }
+
+  changeStateChild(index){
+    if(typeof this.props.ChangeStateFn !==  'undefined'){
+      this.props.ChangeStateFn(index)
+    }
+  }
+  
     render() {
       
       const font_style = {
@@ -23,9 +34,9 @@ class InDropDownComp extends React.Component {
             {(()=>{
               let list_options = []
               if(typeof this.props.values != 'undefined'){
-                this.props.values.forEach(e => {
+                this.props.values.forEach((e, i) => {
                   console.log(e)
-                  list_options.push( <li><a class="dropdown-item" href="#">{e}</a></li>)
+                  list_options.push( <li><a class="dropdown-item" onClick={()=>{ this.changeStateChild(i) }} href="#">{e}</a></li>)
                 });
               
               return (<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">

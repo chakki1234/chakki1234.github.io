@@ -28,7 +28,7 @@ class TextComp extends React.Component {
                <span style={font_style}>Education</span>
            </div>
            <div className='d-flex flex-column col-8 justify-content-center align-items-center'>
-           <VerticalLinearStepper />   
+           <VerticalLinearStepper ChangeStateFn = {this.props.ChangeStateFn} eduState={this.props.eduState}/>   
            </div>
         </div>
       );
