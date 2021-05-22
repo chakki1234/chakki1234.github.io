@@ -58,10 +58,9 @@ class VerticalLinearStepper extends React.Component {
     const backgnd_style = {
        backgroundColor: '#ecebe7'
     }
-  
     
     return (
-      <div className='d-flex col-10' >
+      <div className='d-flex col-10'>
         <Stepper activeStep={this.props.eduState} style={backgnd_style} orientation="vertical">
           {steps.map((label, index) => (
             <Step key={label}>

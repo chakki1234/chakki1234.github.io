@@ -6,7 +6,7 @@ class TextComp extends React.Component {
     render() {
       
       const backgnd_style = {
-        height: '100%',
+        height: '100vh',
         backgroundColor: '#ecebe7'
       }
 

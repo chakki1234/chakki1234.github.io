@@ -1,7 +1,8 @@
 import React from 'react';
 import DropDownComp from '../dropDownComp/drop_down';
 import ImgComp from '../photoComp/photoComp';
-import TextComp from '../textComp/textComp'
+import TextComp from '../textComp/textComp';
+import ImgTextComp from '../imgCompText/imgCompText';
 
 class MainComp extends React.Component {
      
@@ -40,6 +41,7 @@ class MainComp extends React.Component {
       
       <ImgComp/>
       <TextComp eduState={this.state.eduState} ChangeStateFn = {this.changeEduState} />
+      <ImgTextComp />
       </div>
       );
     }

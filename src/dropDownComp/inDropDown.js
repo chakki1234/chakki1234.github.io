@@ -51,23 +51,3 @@ class InDropDownComp extends React.Component {
   }
 
  export default InDropDownComp
-
-
-
-
-//  {(()=>{
-//   if( typeof this.props.value != 'undefined' ){
-//   let list_options = []
-//   this.params.value.forEach(e => {
-//     list_options.push(<li><a class="dropdown-item" href="#">{e}</a></li>)
-//   });
-   
-//   return (<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-//             <li><a class="dropdown-item" href="#">qqq</a></li>
-//             <li><a class="dropdown-item" href="#">qqq</a></li>
-//             <li><a class="dropdown-item" href="#">qqq</a></li>
-//           </ul>);
-//   }
-//   else
-//   return null;
-// })()}
