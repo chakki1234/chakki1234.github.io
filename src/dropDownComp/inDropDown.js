@@ -27,13 +27,18 @@ class InDropDownComp extends React.Component {
       
       return (
         <div class="dropdown" style={font_style}>
-        <button class="btn btn-light dropdown-toggle p-0" id='dropdownMenuButton' style={btn_background} type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        
+        { typeof this.props.values === 'undefined' ? <button class="btn btn-light p-0" style={btn_background} type="button">
           {this.props.name}
-        </button>
+        </button>:
+           <button class="btn btn-light dropdown-toggle p-0" id='dropdownMenuButton' style={btn_background} type="button" data-bs-toggle="dropdown" aria-expanded="false">
+           {this.props.name}
+         </button>
+        }
         
             {(()=>{
               let list_options = []
-              if(typeof this.props.values != 'undefined'){
+              if(typeof this.props.values !== 'undefined'){
                 this.props.values.forEach((e, i) => {
                   list_options.push( <li><a class="dropdown-item" onClick={()=>{ this.changeStateChild(i) }} href={`#scrollspy${this.props.name}`}>{e}</a></li>)
                 });
