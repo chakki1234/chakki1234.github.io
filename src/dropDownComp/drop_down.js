@@ -13,7 +13,7 @@ class DropDownComp extends React.Component {
       const drop_down_obj = {
         Education: ['National Institute of Technology Trichy', 'Maharishi Vidya Mandir', 'Chinmaya Vidyalaya', 'Coursera Courses'],
         Internship: ['SPIRE Labs, IISC', 'IIT Hyderabad', 'Patterns Cognitive'],
-        Projects: ['Police CMS', 'Spider Orientation App', 'Recal UAE'],
+        Projects: ['Police CMS', 'Recal UAE', 'Spider Orientation App', ],
         'Contact me': ['+91 9003056236', 'chakkirala.a@gmail.com', '107118015@nitt.edu']
       }
       

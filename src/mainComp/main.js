@@ -4,6 +4,7 @@ import PhotoComp from '../photoComp/photoComp';
 import TextComp from '../textComp/textComp';
 import ImgTextComp from '../imgCompText/imgCompText';
 import ContactComp from '../contactComp/contactComp'
+import HoriStepperWrap from '../HoriStepperCom/horizontalCompWrapper'
 
 class MainComp extends React.Component {
      
@@ -11,9 +12,11 @@ class MainComp extends React.Component {
     super(props);
     this.changeEduState = this.changeEduState.bind(this);
     this.changeInternState = this.changeInternState.bind(this);
+    this.changeProjectState = this.changeProjectState.bind(this);
     this.state = {
       eduState: 0,
-      internState: 0
+      internState: 0,
+      projectState: 0
     }
   }
 
@@ -26,6 +29,12 @@ class MainComp extends React.Component {
   changeInternState(index){
     this.setState({
       internState: index
+    })
+  }
+
+  changeProjectState(index){
+    this.setState({
+      projectState: index
     })
   }
    
@@ -45,12 +54,13 @@ class MainComp extends React.Component {
           <div className='d-flex flex-row justify-content-center col-4' style={main_head_style}>
             <span>ANISH</span>
           </div>
-          <DropDownComp name={['Projects', 'Contact me']}/>
+          <DropDownComp name={['Projects', 'Contact me']} ChangeStateFn = { { Projects : this.changeProjectState, 'About me': undefined} }/>
          </div>
       
       <PhotoComp/>
       <TextComp eduState={this.state.eduState} ChangeStateFn = {this.changeEduState} />
       <ImgTextComp internState={this.state.internState} ChangeStateFn={this.changeInternState} />
+      <HoriStepperWrap projectState={this.state.projectState} ChangeStateFn={this.changeProjectState}/>
       <ContactComp />
       </div>
       );
