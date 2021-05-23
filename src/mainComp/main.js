@@ -3,6 +3,7 @@ import DropDownComp from '../dropDownComp/drop_down';
 import PhotoComp from '../photoComp/photoComp';
 import TextComp from '../textComp/textComp';
 import ImgTextComp from '../imgCompText/imgCompText';
+import ContactComp from '../contactComp/contactComp'
 
 class MainComp extends React.Component {
      
@@ -50,6 +51,7 @@ class MainComp extends React.Component {
       <PhotoComp/>
       <TextComp eduState={this.state.eduState} ChangeStateFn = {this.changeEduState} />
       <ImgTextComp internState={this.state.internState} ChangeStateFn={this.changeInternState} />
+      <ContactComp />
       </div>
       );
     }
