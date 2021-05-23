@@ -40,7 +40,7 @@ class MainComp extends React.Component {
       <div className='d-flex col-12 flex-column'>
        
        <div className='d-flex col-12 flex-row justify-content-around align-items-start mt-5'>
-          <DropDownComp name={['About Me', 'Education', 'Internship']} ChangeStateFn = { {'About Me': undefined, Education : this.changeEduState, Internship: undefined} }/> 
+          <DropDownComp name={['About Me', 'Education', 'Internship']} ChangeStateFn = { {'About Me': undefined, Education : this.changeEduState, Internship: this.changeInternState} }/> 
           <div className='d-flex flex-row justify-content-center col-4' style={font_style}>
             <span>ANISH</span>
           </div>
