@@ -20,7 +20,7 @@ class HoriStepperWrap extends React.Component{
                     <div className='d-flex flex-row col-10 align-items-center justify-content-center mt-5 mb-5'>
                         <span style={head_style}>Projects...</span>
                     </div>
-                    <div className='d-flex flex-row col-10'>
+                    <div className='d-flex flex-row col-10 justify-content-center'>
                         <HorizontalLabelPositionBelowStepper projectState={this.props.projectState} ChangeStateFn={this.props.ChangeStateFn}/>
                     </div>
 

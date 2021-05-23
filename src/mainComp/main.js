@@ -15,7 +15,7 @@ class MainComp extends React.Component {
     this.changeProjectState = this.changeProjectState.bind(this);
     this.state = {
       eduState: 0,
-      internState: 0,
+      internState: 1,
       projectState: 0
     }
   }

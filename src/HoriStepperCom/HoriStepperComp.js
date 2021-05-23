@@ -61,39 +61,44 @@ class HorizontalLabelPositionBelowStepper extends React.Component {
   render(){
 
     const steps = getSteps();
+    const back_gnd_style = {
+        backgroundColor: '#ecebe7'
+    }
+    const para_style = {
+        fontFamily: "Barlow",
+        fontSize: '1.5rem',
+        color: '#383434'
+      }
 
     return (
-        <div className='d-flex col-10'>
-          <Stepper activeStep={this.props.projectState} alternativeLabel>
+        <div className='d-flex flex-column align-items-center justify-content-center col-10'>
+          <Stepper style={back_gnd_style} className='d-flex col-12' activeStep={this.props.projectState} alternativeLabel>
             {steps.map((label) => (
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
               </Step>
             ))}
           </Stepper>
-          <div>
-            {this.props.projectState === steps.length ? (
-              <div>
-                <Typography>All steps completed</Typography>
-                <Button>Reset</Button>
-              </div>
-            ) : (
-              <div>
-                <Typography>{getStepContent(this.props.projectState)}</Typography>
-                <div>
-                  <Button
+          <div className='d-flex flex-column align-items-center col-8 mt-5'>
+                <Typography style={para_style}>{getStepContent(this.props.projectState)}</Typography>
+                <div className='d-flex col-4 flex-row justify-content-center mt-5'>
+                  <Button className='m-2'
                     disabled={this.props.projectState === 0}
                     onClick={this.handleBack}
                   >
                     Back
                   </Button>
-                  <Button variant="contained" color="primary" onClick={this.handleNext}>
-                    {this.props.projectState === steps.length - 1 ? 'Finish' : 'Next'}
-                  </Button>
+
+                  {(()=>{
+                      if(this.props.projectState !== steps.length -1 )
+                      return (
+                      <Button className='m-2' variant="contained" color="primary" onClick={this.handleNext}>
+                      Next
+                    </Button>
+                    )
+                  })()}
                 </div>
               </div>
-            )}
-          </div>
         </div>
       );
   }
