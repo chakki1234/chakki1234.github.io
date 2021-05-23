@@ -13,7 +13,7 @@ class TextDiv extends React.Component {
     
     render() {
       
-      const font_style = {
+      const sub_head_style = {
         fontFamily: "Roboto Condensed",
         fontSize: '2rem',
         color: '#112f8a',
@@ -34,7 +34,7 @@ class TextDiv extends React.Component {
             <div className='d-flex col-8 mt-4 mb-4 flex-column'>
                 <div className='d-flex flex-row'>
                     <button style={btn_style} onClick={()=>{ this.ChangeStateFn(this.props.value) }} class="btn btn-outline-dark">+</button>
-                    <span style={font_style} >{this.props.head}</span>
+                    <span style={sub_head_style} >{this.props.head}</span>
                 </div> 
                 { this.props.internState === this.props.value ?  <div>
                     <span style={para_style} >{this.props.body}</span>  

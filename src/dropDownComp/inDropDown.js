@@ -35,8 +35,7 @@ class InDropDownComp extends React.Component {
               let list_options = []
               if(typeof this.props.values != 'undefined'){
                 this.props.values.forEach((e, i) => {
-                  console.log(e)
-                  list_options.push( <li><a class="dropdown-item" onClick={()=>{ this.changeStateChild(i) }} href="#">{e}</a></li>)
+                  list_options.push( <li><a class="dropdown-item" onClick={()=>{ this.changeStateChild(i) }} href={`#scrollspy${this.props.name}`}>{e}</a></li>)
                 });
               
               return (<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">

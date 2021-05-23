@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ImgComp extends React.Component {
+class PhotoComp extends React.Component {
      
     render() {
       
@@ -9,7 +9,7 @@ class ImgComp extends React.Component {
         borderRadius: '60%'
       }
 
-      const font_style = {
+      const head_style = {
         fontFamily: "Roboto Condensed",
         fontSize: '3rem',
         color: '#112f8a'
@@ -25,7 +25,7 @@ class ImgComp extends React.Component {
         <div className='d-flex flex-row col-12 justify-content-around mt-5'>
            <img className='col-2' src='anish_pic.jpeg' style={img_style}/>
            <div className='d-flex flex-column col-8 '>
-                <div className="d-flex col-12" style={font_style}>
+                <div className="d-flex col-12" style={head_style}>
                     About Me ...
                 </div> 
                 <div className="d-flex col-12" style={para_style}>
@@ -38,4 +38,4 @@ class ImgComp extends React.Component {
     }
   }
 
- export default ImgComp
+ export default PhotoComp

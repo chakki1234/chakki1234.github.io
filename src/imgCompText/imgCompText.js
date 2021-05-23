@@ -10,24 +10,33 @@ class ImgTextComp extends React.Component {
       }
 
       const heading = ['IISC Spire Labs', 'IIT Hyderabad', 'Patterns Cognitive']
-      const content = ['sddddddddd jjjnj bnj njn ijnikon inknkkn jnjkn njknjknkj njknjk n nkj jnj mk j nm  b n juib n iju jkum b  jk', 'orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.']
+      const content = ['In progress', 
+      `Guided by Dr. G.V.V Sharma, Associate Professor, Indian Institute of Technology Hyderabad
+      To find patterns in various holy poems from Hindu Scriptures, belonging to different Indian
+      Languages, using an ML model.
+      Given unlabelled stanzas from different holy poems, the task was to extract feature vectors and
+      cluster all the stanzas that belong to the same holy poem using an ML model.
+      The objective is to use the trained ML model to determine if a person is chanting any holy poem
+      accurately.
+      The ML framework used is TensorFlow, along with NLP libraries like iNLTK.`, `Designed and verified a Python-based program using OpenCV, which detects the date, amount,
+      and MICR number of a cheque and feeds the data to a custom made text extractor.`]
       
       const img_style = {
         height: '400px',
         borderRadius: '60%'
       }
 
-      const font_style = {
+      const head_style = {
         fontFamily: "Roboto Condensed",
         fontSize: '4rem',
         color: '#ed574c'
       }
 
       return (
-        <div className='d-flex flex-row col-12 justify-content-around ' style={backgnd_style}>
+        <div className='d-flex flex-row col-12 justify-content-around' id='scrollspyInternship' style={backgnd_style}>
            <div className='d-flex flex-column col-8 justify-content-center align-items-center'>
             <div className='d-flex col-12 flex-row justify-content-center'>
-                <span style={font_style} >Internships...</span>
+                <span style={head_style} >Internships...</span>
             </div> 
 
             {(()=>{
