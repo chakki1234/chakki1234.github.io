@@ -29,7 +29,7 @@ class PhotoComp extends React.Component {
                     About Me ...
                 </div> 
                 <div className="d-flex col-12" style={para_style}>
-                    I am a web developer and a machine learning enthusiast majoring in Electrical and Electronics Engineering. I am proficient with programming languages C, Python, Javascript, and Dart. I also have a strong foundation in mathematics. Learned and practiced machine learning algorithms in Python with numerical libraries and Tensorflow. I am currently working with Dr. G V V Sharma of IIT Hyderabad on NLP. 
+                    I am a web developer and a machine learning enthusiast majoring in Electrical and Electronics Engineering. I am proficient with programming languages C, Python, Javascript, and Dart. Learned and practiced machine learning algorithms in Python with numerical libraries and Tensorflow. I also watch a lot of movies and love to play Tennis. 
                 </div> 
                 
            </div>

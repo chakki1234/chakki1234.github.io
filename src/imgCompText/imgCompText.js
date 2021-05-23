@@ -10,7 +10,7 @@ class ImgTextComp extends React.Component {
       }
 
       const heading = ['IISC Spire Labs', 'IIT Hyderabad', 'Patterns Cognitive']
-      const content = ['In progress', 
+      const content = ['Currently an intern at SPIRE Labs. Will post more about the same once I finish my intern.', 
       `Guided by Dr. G.V.V Sharma, Associate Professor, Indian Institute of Technology Hyderabad
       To find patterns in various holy poems from Hindu Scriptures, belonging to different Indian
       Languages, using an ML model.

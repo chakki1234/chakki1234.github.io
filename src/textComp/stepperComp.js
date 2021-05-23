@@ -14,7 +14,7 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `I am a final year undergrad student majoring in Electrical and Electronics Engineering with a minor in Computer Science and Engineering. As a part of my B.Tech Program I have completed the following courses:`;
+      return `I am a final year undergrad student majoring in Electrical and Electronics Engineering with a minor in Computer Science and Engineering. As a part of my B.Tech Program I have completed the following courses: Circuit Theory, Digital Electronics, Analog Electronics, Data Structure and Algorithms, Linear Integrated Circuits, Microprocessor and Microcontroller, VLSI, Computer Organization, DBMS, Operating system. CGPA 8.76`;
     case 1:
       return 'Completed my 11th and 12th here. Was a Computer Science student and finished off with 93.4%';
     case 2:
