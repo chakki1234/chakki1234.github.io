@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/chakki1234.github.io/static/js/main.75489ba2.chunk.js",
+    "main.js.map": "/chakki1234.github.io/static/js/main.75489ba2.chunk.js.map",
+    "runtime-main.js": "/chakki1234.github.io/static/js/runtime-main.f398641c.js",
+    "runtime-main.js.map": "/chakki1234.github.io/static/js/runtime-main.f398641c.js.map",
+    "static/js/2.83e73b32.chunk.js": "/chakki1234.github.io/static/js/2.83e73b32.chunk.js",
+    "static/js/2.83e73b32.chunk.js.map": "/chakki1234.github.io/static/js/2.83e73b32.chunk.js.map",
+    "index.html": "/chakki1234.github.io/index.html",
+    "static/js/2.83e73b32.chunk.js.LICENSE.txt": "/chakki1234.github.io/static/js/2.83e73b32.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f398641c.js",
+    "static/js/2.83e73b32.chunk.js",
+    "static/js/main.75489ba2.chunk.js"
+  ]
+}
