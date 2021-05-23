@@ -8,9 +8,11 @@ class MainComp extends React.Component {
      
   constructor(props) {
     super(props);
-    this.changeEduState = this.changeEduState.bind(this)
+    this.changeEduState = this.changeEduState.bind(this);
+    this.changeInternState = this.changeInternState.bind(this);
     this.state = {
-      eduState: 0
+      eduState: 0,
+      internState: 0
     }
   }
 
@@ -20,7 +22,13 @@ class MainComp extends React.Component {
     })
   }
 
-    render() {
+  changeInternState(index){
+    this.setState({
+      internState: index
+    })
+  }
+   
+  render() {
 
       const font_style = {
         fontFamily: "Roboto Condensed",
@@ -41,7 +49,7 @@ class MainComp extends React.Component {
       
       <ImgComp/>
       <TextComp eduState={this.state.eduState} ChangeStateFn = {this.changeEduState} />
-      <ImgTextComp />
+      <ImgTextComp internState={this.state.internState} ChangeStateFn={this.changeInternState} />
       </div>
       );
     }
